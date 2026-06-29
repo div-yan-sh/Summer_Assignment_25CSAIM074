@@ -1,2 +1,13 @@
-#include<stdio.h>
-int main(){printf("Pattern program for Q31\n");return 0;}
+#include <stdio.h>
+
+int main() {
+    int i, j, rows = 5;
+
+    /* Character triangle: A / AB / ABC ... */
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j <= i; j++)
+            printf("%c", 'A' + j);
+        printf("\n");
+    }
+    return 0;
+}
