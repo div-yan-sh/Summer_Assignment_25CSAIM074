@@ -1,2 +1,13 @@
-#include<stdio.h>
-int main(){printf("Pattern program for Q34\n");return 0;}
+#include <stdio.h>
+
+int main() {
+    int i, j, rows = 5;
+
+    /* Reverse number triangle: 12345 / 1234 ... / 1 */
+    for (i = rows; i >= 1; i--) {
+        for (j = 1; j <= i; j++)
+            printf("%d", j);
+        printf("\n");
+    }
+    return 0;
+}
