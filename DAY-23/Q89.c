@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 
 int main() {
     char s[1000];
@@ -12,9 +11,12 @@ int main() {
     for (int i = 0; s[i] != '\0' && s[i] != '\n'; ++i)
         freq[(unsigned char)s[i]]++;
 
-    printf("Character frequencies:\n");
-    for (int i = 0; i < 256; ++i)
-        if (freq[i] > 0)
-            printf("'%c' (ASCII %d): %d\n", (char)i, i, freq[i]);
+    for (int i = 0; s[i] != '\0' && s[i] != '\n'; ++i) {
+        if (freq[(unsigned char)s[i]] == 1) {
+            printf("First non-repeating character: %c\n", s[i]);
+            return 0;
+        }
+    }
+    printf("No non-repeating character found\n");
     return 0;
 }

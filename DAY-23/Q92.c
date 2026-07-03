@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 
 int main() {
     char s[1000];
@@ -12,9 +11,14 @@ int main() {
     for (int i = 0; s[i] != '\0' && s[i] != '\n'; ++i)
         freq[(unsigned char)s[i]]++;
 
-    printf("Character frequencies:\n");
+    int maxf = 0;
+    unsigned char ch = 0;
     for (int i = 0; i < 256; ++i)
-        if (freq[i] > 0)
-            printf("'%c' (ASCII %d): %d\n", (char)i, i, freq[i]);
+        if (freq[i] > maxf) { maxf = freq[i]; ch = (unsigned char)i; }
+
+    if (maxf > 0)
+        printf("Maximum occurring character: '%c' (count %d)\n", ch, maxf);
+    else
+        printf("String is empty\n");
     return 0;
 }
