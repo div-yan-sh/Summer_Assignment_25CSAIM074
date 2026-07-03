@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// Q94: Simple string compression (counts consecutive characters)
-// Example: aabcccccaaa -> a2b1c5a3
+
 int main() {
     char s[1000];
     printf("Enter a string: ");
@@ -20,7 +19,7 @@ int main() {
     }
     out[j] = '\0';
 
-    // If compressed is not smaller, you may return original; we'll print compressed
+    
     printf("Compressed: %s\n", out);
     return 0;
 }
