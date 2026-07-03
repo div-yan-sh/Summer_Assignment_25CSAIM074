@@ -2,7 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 
-// Q95: Find longest word in a line
+
 int main() {
     char s[2000];
     printf("Enter a sentence: ");
