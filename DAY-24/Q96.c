@@ -2,7 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 
-// Q96: Remove duplicate characters, keep first occurrence
+
 int main() {
     char s[1000];
     printf("Enter a string: ");
