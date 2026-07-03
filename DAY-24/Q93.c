@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 
-// Q93: Check if s2 is a rotation of s1
+
 int isRotation(const char *s1, const char *s2) {
     int n1 = strlen(s1);
     int n2 = strlen(s2);
     if (n1 != n2) return 0;
 
-    // Create a temporary string s1s1 = s1 + s1
+
     char *s1s1 = (char *)malloc(n1 * 2 + 1);
     if (!s1s1) return 0;
     strcpy(s1s1, s1);
